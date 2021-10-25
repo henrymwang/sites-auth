@@ -18,19 +18,19 @@
   },
   "base_image_tag": "node-12.18",
   "dependencies": {
-    "installDepsCmd": "npm install -g serve && npm install",
+    "installDepsCmd": "./ci/install_deps.sh",
     "requiredFiles": [
       "package.json",
       "package-lock.json"
     ]
   },
   "buildArtifacts": {
-    "build_setup_cmd": "npm install",
-    "build_cmd": "npm run build"
+    "build_setup_cmd": "./ci/build_setup.sh",
+    "build_cmd": "./ci/build.sh"
   },
   "livePreview": {
-    "serve_setup_cmd": "echo setup",
-    "serve_cmd": "echo serve"
+    "serve_setup_cmd": "./ci/serve_setup.sh",
+    "serve_cmd": "./ci/serve.sh"
   },
   "watch_cmd": "npm run watch"
 }
