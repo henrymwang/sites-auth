@@ -30,7 +30,7 @@
   },
   "livePreview": {
     "serve_setup_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && npx jambo build && grunt webpack",
-    "serve_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && export IS_DEVELOPMENT_PREVIEW='true' && serve -l 8080 desktop/ & grunt watch"
+    "serve_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && export IS_DEVELOPMENT_PREVIEW='true' && serve -l 8080 public/ & grunt watch"
   },
   "watch_cmd": "npm run watch"
 }
