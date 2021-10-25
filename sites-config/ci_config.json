@@ -18,8 +18,11 @@
   },
   "base_image_tag": "node-12.18",
   "dependencies": {
-    "installDepsCmd": "echo install",
-    "requiredFiles": []
+    "installDepsCmd": "npm install -g serve && npm install",
+    "requiredFiles": [
+      "package.json",
+      "package-lock.json"
+    ]
   },
   "buildArtifacts": {
     "build_setup_cmd": "npm install",
