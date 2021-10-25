@@ -18,19 +18,19 @@
   },
   "base_image_tag": "node-12.18",
   "dependencies": {
-    "installDepsCmd": "../ci/install_deps.sh",
+    "installDepsCmd": "npm install -g serve && npm i",
     "requiredFiles": [
       "package.json",
       "package-lock.json"
     ]
   },
   "buildArtifacts": {
-    "build_setup_cmd": "../ci/build_setup.sh",
-    "build_cmd": "../ci/build.sh"
+    "build_setup_cmd": "npm install",
+    "build_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && export IS_DEVELOPMENT_PREVIEW='false' && npx jambo build && grunt webpack"
   },
   "livePreview": {
-    "serve_setup_cmd": "../ci/serve_setup.sh",
-    "serve_cmd": "../ci/serve.sh"
+    "serve_setup_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && npx jambo build && grunt webpack",
+    "serve_cmd": "export NODE_OPTIONS='--max-old-space-size=1024' && export IS_DEVELOPMENT_PREVIEW='true' && serve -l 8080 desktop/ & && grunt webpack"
   },
   "watch_cmd": "npm run watch"
 }
