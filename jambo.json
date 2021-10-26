@@ -8,7 +8,8 @@
       "partials",
       "layouts/header.hbs",
       "layouts/footer.hbs",
-      "layouts/headincludes.hbs"
+      "layouts/headincludes.hbs",
+      "script/on-document-load.js"
     ],
     "preservedFiles": []
   },
