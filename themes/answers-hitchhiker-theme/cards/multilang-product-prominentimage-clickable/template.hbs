@@ -13,6 +13,9 @@
       {{> subtitle }}
       <div class="HitchhikerProductProminentImage-contentWrapper">
         {{> details }}
+        <div class="HitchhikerCard-actions">
+          {{> thumbsfeedback card feedbackSubmitted=feedbackSubmitted}}
+        </div>
       </div>
     </div>
   {{#if card.url}}</a>{{/if}}
