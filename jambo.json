@@ -9,7 +9,8 @@
       "layouts/header.hbs",
       "layouts/footer.hbs",
       "layouts/headincludes.hbs",
-      "script/on-document-load.js"
+      "script/on-document-load.js",
+      "script/core.hbs"
     ],
     "preservedFiles": []
   },
