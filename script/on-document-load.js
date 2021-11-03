@@ -3,8 +3,16 @@
 
 if (!window.YEXT_TOKENS || !window.YEXT_TOKENS.token1 || !window.YEXT_TOKENS.token1.token) {
   console.log('The auth token was not found on the window at window.YEXT_TOKENS.token1.token');
-} else {
-  const token = window.YEXT_TOKENS.token1.token;
-  console.log(`Setting token ${token} in the runtime config`);
-  AnswersExperience.runtimeConfig.set('tokenHeader', token);
+} 
+// else {
+//   const token = window.YEXT_TOKENS.token1.token;
+//   console.log(`Setting token ${token} in the runtime config`);
+//   AnswersExperience.runtimeConfig.set('tokenHeader', token);
+// }
+// console.log('lol!')
+else {
+  console.log('initting with token', window.YEXT_TOKENS.token1.token)
+  window.AnswersExperience.init({
+    tokenHeader: window.YEXT_TOKENS.token1.token
+  });
 }

@@ -11,7 +11,8 @@
       "layouts/headincludes.hbs",
       "script/on-document-load.js",
       "script/core.hbs",
-      "script/on-ready.js"
+      "script/on-ready.js",
+      "layouts/html.hbs"
     ],
     "preservedFiles": []
   },
